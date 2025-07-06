@@ -7,7 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file=.env --watch index.js"
+    "dev": "node --env-file=.env --watch index.js",
+    "build": "vite build"
+
   },
   "prisma": {
     "seed": "node prisma/seed.js"
