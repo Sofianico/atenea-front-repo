@@ -30,7 +30,8 @@ jobs:
           ECR_REPOSITORY: atenea-frontend-repo
           IMAGE_TAG: latest
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
+          docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Register new task definition
@@ -38,11 +39,12 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: atenea-frontend-task-definition.json
+          container-name: atenea-frontend-container
+          image: ${{ steps.login-ecr.outputs.registry }}/atenea-frontend-repo:latest
 
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
-          service: atenea-frontend-service
           cluster: atenes-frontend-cluster
+          service: atenea-frontend-service
           task-definition: ${{ steps.register-task.outputs.task-definition }}
-          wait-for-service-stability: true
