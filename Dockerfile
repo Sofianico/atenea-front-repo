@@ -17,8 +17,7 @@ RUN npm run build && npm run export
 FROM nginx:stable-alpine
 COPY --from=builder /app/out /usr/share/nginx/html
 
-# Copia una configuración mínima de NGINX (opcional)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
