@@ -1,0 +1,44 @@
+.sectionCreatedByMy {
+  max-width: var(--primary-max-width);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thirds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.newCourse {
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  color: white;
+  border: none;
+  border-radius: var(--primary-border-radius);
+  background-color: var(--secondary-background-color);
+  transition: transform 0.2s ease;
+}
+
+.courseActions {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.newCourse:hover {
+  transform: scale(1.03);
+}
+
+.title {
+  font: var(--primary-bold-medium-font);
+}
+
+.description {
+  font: var(--primary-medium-font);
+}

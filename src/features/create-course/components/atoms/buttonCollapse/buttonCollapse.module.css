@@ -1,0 +1,23 @@
+.buttonIcon {
+  cursor: pointer;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+}
+
+.buttonIcon .icon {
+  transition: 200ms;
+  transform: rotate(-90deg);
+
+  color: gray;
+  font-size: 1rem;
+}
+
+.active .icon {
+  transform: rotate(0);
+  color: black;
+}

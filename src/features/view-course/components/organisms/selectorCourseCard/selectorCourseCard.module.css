@@ -1,0 +1,22 @@
+.selectorLabelCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.inputTextContainer {
+  width: 100%;
+  max-width: var(--secondary-max-width);
+
+  padding: 4rem;
+}
+
+.gallery {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}

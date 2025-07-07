@@ -1,0 +1,49 @@
+.headerActionsPrivate {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.profileContainer {
+  cursor: pointer;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: var(--circle-border-radius);
+  background-color: transparent;
+  transition: background-color var(--primary-transition-duration);
+}
+
+.profileContainer:hover {
+  background-color: var(--tertiary-background-color);
+}
+
+.profileContainer img {
+  border-radius: var(--circle-border-radius);
+}
+
+.menuContainer {
+  width: 15rem;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 0 0 1px #d1d2e0, 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+
+  overflow: hidden;
+
+  padding: 0.5rem;
+}
+
+.active .menuContainer {
+  display: flex;
+}

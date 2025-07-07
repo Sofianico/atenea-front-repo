@@ -1,0 +1,21 @@
+.cardLabel {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: transparent;
+  border: 2px solid #e8eef7;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: var(--primary-medium-font);
+}
+
+.active {
+  border: var(--tertiary-border);
+}
+
+.activeIcon {
+  color: var(--tertiary-color);
+}

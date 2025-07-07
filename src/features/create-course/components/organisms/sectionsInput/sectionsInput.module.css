@@ -1,0 +1,25 @@
+.sectionsInput {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.header > button {
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+.header > button {
+  border-radius: var(--circle-border-radius);
+}
+
+.header > button:hover {
+  background-color: var(--tertiary-background-color);
+}

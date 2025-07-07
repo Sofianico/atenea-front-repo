@@ -1,0 +1,51 @@
+.sectionsModal {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionsModal > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  padding: 3rem;
+
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.title {
+  max-width: 40rem;
+  font: var(--primary-bold-large-font);
+  text-align: center;
+}
+
+.content {
+  width: 80%;
+  min-height: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer > div {
+  width: 80%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+}

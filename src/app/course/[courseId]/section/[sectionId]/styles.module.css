@@ -1,0 +1,56 @@
+.content {
+  max-width: 60%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  width: 20%;
+  height: calc(100vh - 50px - 80px);
+
+  padding: 1rem;
+
+  position: fixed;
+  top: 3rem;
+}
+
+.rightPanel {
+  right: 0;
+}
+
+.leftPanel {
+  left: 0;
+}
+
+.panel > div {
+  height: 100%;
+
+  border-radius: var(--primary-border-radius);
+
+  box-shadow: 0 0 0 1px #d1d2e0, 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+}
+
+.courseContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumbContainer {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+}

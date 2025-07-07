@@ -1,0 +1,14 @@
+.buttonIcon {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+}
+
+.icon:hover {
+  color: var(--primary-color);
+  background-color: var(--tertiary-background-color);
+}

@@ -1,0 +1,14 @@
+.link {
+  cursor: pointer;
+  padding: var(--button-primary-padding);
+
+  border-radius: var(--primary-border-radius);
+  border: none;
+  background-color: transparent;
+
+  color: var(--link-primary-color);
+  font: var(--primary-medium-font);
+  &:hover {
+    color: var(--link-primary-hover-color);
+  }
+}

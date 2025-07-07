@@ -1,0 +1,22 @@
+.treeSectionCard {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+
+  border: var(--primary-border);
+  border-bottom: none;
+  border-radius: 0.25rem;
+}
+
+.addSectionRootContainer {
+  padding: 0.5rem;
+  border-radius: 0.25rem !important;
+  border: var(--primary-border);
+}

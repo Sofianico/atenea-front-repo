@@ -1,0 +1,13 @@
+.inputLongText {
+  resize: none;
+  width: 100%;
+  height: 8rem;
+
+  padding: 1rem;
+
+  outline: none;
+  border: var(--primary-border);
+  border-radius: 2rem;
+
+  font: var(--primary-medium-font);
+}

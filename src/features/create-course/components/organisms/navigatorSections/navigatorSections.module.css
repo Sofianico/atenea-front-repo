@@ -1,0 +1,9 @@
+.treeSectionCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+}

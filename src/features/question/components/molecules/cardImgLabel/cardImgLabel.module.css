@@ -1,0 +1,40 @@
+.cardImgLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: var(--primary-border);
+  border-radius: 1.5rem;
+
+  transition: transform 200ms;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+.labelText {
+  padding: 1rem;
+  font: var(--primary-medium-font);
+  text-align: center;
+}
+
+.cardImgLabel:hover {
+  transform: scale(1.05);
+}
+
+.active {
+  border: var(--tertiary-border);
+}

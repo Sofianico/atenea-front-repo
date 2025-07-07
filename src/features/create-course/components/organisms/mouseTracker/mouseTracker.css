@@ -1,0 +1,26 @@
+.mouse-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  pointer-events: none;
+}
+
+.mouse-marker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  pointer-events: all;
+}
+
+.mouse-marker:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}

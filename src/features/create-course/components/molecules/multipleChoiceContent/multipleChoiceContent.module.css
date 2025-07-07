@@ -1,0 +1,45 @@
+.inputSentence, .optionInput {
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+
+  outline: none;
+  border: none;
+  border-radius: var(--primary-border-radius);
+
+  word-wrap: break-word;
+  field-sizing: content;
+  overflow: visible;
+
+  font: var(--primary-medium-font);
+}
+
+.inputSentence:hover {
+  background-color: var(--tertiary-background-color);
+}
+
+.options {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+
+  border-radius: var(--primary-border-radius);
+
+  font: var(--primary-medium-font);
+}
+
+.option:hover {
+  background-color: var(--tertiary-background-color);
+}
+
+.input {
+  margin: 1rem;
+}
+
+.optionInput {
+  background-color: transparent;
+}

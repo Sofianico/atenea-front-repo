@@ -1,0 +1,13 @@
+.inputAutocomplete {
+  width: 100%;
+  padding: 1rem;
+  border: var(--primary-border);
+  border-radius: 2rem;
+  outline: none;
+  font: var(--primary-medium-font);
+}
+
+.inputAutocomplete.active {
+  border-radius: 2rem 2rem 0 0;
+  border-bottom: none;
+}

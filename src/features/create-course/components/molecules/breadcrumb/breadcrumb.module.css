@@ -1,0 +1,23 @@
+.breadcrumb {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  font: var(--primary-medium-font);
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+.breadcrumb li + li::before {
+  content: "›";
+  padding: 0 0.5em;
+  font: var(--primary-medium-font);
+}
+
+.breadcrumb li:last-child {
+  font-weight: bold;
+  color: #000;
+}

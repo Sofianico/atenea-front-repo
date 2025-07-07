@@ -1,0 +1,10 @@
+.inputText {
+  width: 100%;
+  padding: 1rem;
+
+  outline: none;
+  border: var(--primary-border);
+  border-radius: 2rem;
+  
+  font: var(--primary-medium-font);
+}

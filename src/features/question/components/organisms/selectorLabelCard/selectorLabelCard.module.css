@@ -1,0 +1,18 @@
+.selectorLabelCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gallery {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.labelCardWrapper {
+  height: 80px;
+}

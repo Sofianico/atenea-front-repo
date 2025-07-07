@@ -1,0 +1,48 @@
+.toggleLabelCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cardTag {
+  cursor: pointer;
+  height: 100%;
+
+  padding: 0 0.75rem;
+
+  background-color: transparent;
+  border: var(--tertiary-border);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font: var(--primary-medium-font);
+  transition: transform 200ms;
+}
+
+.checkIcon {
+  color: var(--tertiary-color);
+  display: block;
+}
+
+.deleteIcon {
+  color: var(--quaternary-color);
+  display: none;
+}
+
+.cardTag:hover {
+  transform: scale(1.05);
+  border: var(--quaternary-border);
+}
+
+.cardTag:hover .checkIcon {
+  display: none;
+}
+
+.cardTag:hover .deleteIcon {
+  display: block;
+}
+  

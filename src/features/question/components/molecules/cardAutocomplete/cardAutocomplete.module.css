@@ -1,0 +1,12 @@
+.cardAutocomplete {
+  cursor: cursor;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  font: var(--primary-medium-font);
+  &:hover {
+    background-color: #0000000d;
+  }
+}

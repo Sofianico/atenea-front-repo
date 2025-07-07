@@ -1,0 +1,21 @@
+.textInputContent {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  resize: none;
+  
+  outline: none;
+  border: none;
+  border-radius: var(--primary-border-radius);
+
+  word-wrap: break-word;
+  field-sizing: content;
+  overflow: visible;
+  
+  font: var(--primary-medium-font);
+  line-height: 2;
+}
+
+.textInputContent:hover {
+  background-color: var(--tertiary-background-color);
+}

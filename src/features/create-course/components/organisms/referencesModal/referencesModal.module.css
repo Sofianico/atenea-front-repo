@@ -1,0 +1,46 @@
+.referencesModal {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.title {
+  max-width: 40rem;
+  font: var(--primary-bold-large-font);
+  text-align: center;
+}
+
+.subtitle {
+  font: var(--primary-bold-medium-font);
+}
+
+.message {
+  font: var(--primary-medium-font);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.refs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description {
+  font: var(--primary-medium-font);
+}
+
+.fileName {
+  font: var(--primary-bold-medium-font);
+}
+
+.content {
+  font: var(--primary-medium-font);
+}

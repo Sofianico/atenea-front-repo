@@ -1,0 +1,10 @@
+.contentCreator {
+  width: 100%;
+  padding: 1rem;
+}
+
+.rootActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
