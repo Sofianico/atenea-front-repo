@@ -1,0 +1,22 @@
+{
+  "family": "atenea-frontend-task",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::<tu-account-id>:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "atenea-frontend-container",
+      "image": "<tu-id>.dkr.ecr.us-east-2.amazonaws.com/atenea-frontend-repo:latest",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512"
+}
