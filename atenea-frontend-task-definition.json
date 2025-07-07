@@ -1,11 +1,11 @@
 {
   "family": "atenea-frontend-task",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::<tu-account-id>:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::460195068877:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "atenea-frontend-container",
-      "image": "<tu-id>.dkr.ecr.us-east-2.amazonaws.com/atenea-frontend-repo:latest",
+      "image": "460195068877.dkr.ecr.us-east-2.amazonaws.com/atenea-frontend-repo:latest",
       "portMappings": [
         {
           "containerPort": 3000,
