@@ -43,6 +43,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           service: atenea-frontend-service
-          cluster: atenea-cluster
+          cluster: atenes-frontend-cluster
           task-definition: ${{ steps.register-task.outputs.task-definition }}
           wait-for-service-stability: true
