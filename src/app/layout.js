@@ -18,6 +18,7 @@ export const metadata = {
   title: "The Athena AI",
   description: "",
 };
+export const dynamic = "force-dynamic";
 
 export default function RootLayout({ children }) {
   return (
