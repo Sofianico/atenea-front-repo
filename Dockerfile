@@ -1,16 +1,20 @@
-# Etapa 1: build
-FROM node:18-alpine AS builder
+# Etapa de build
+FROM node:18 AS builder
 
 WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
 COPY . .
 
-RUN npm install
 RUN npm run build
 
-# Etapa 2: producción
-FROM node:18-alpine
+# Etapa de producción
+FROM node:18-alpine AS production
 
 WORKDIR /app
+
 COPY --from=builder /app ./
 
 RUN npm install --omit=dev
