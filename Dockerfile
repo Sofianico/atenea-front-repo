@@ -1,25 +1,22 @@
-# Etapa 1: Construcción
+# Etapa 1: build
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copiamos solo los archivos necesarios primero para aprovechar el cache
 COPY package*.json ./
-COPY next.config.js ./
-COPY public ./public
+RUN npm install
+
 COPY . .
 
-RUN npm install
 RUN npm run build
 
-# Etapa 2: Imagen final con NGINX para servir el contenido estático
-FROM nginx:stable-alpine
+# Etapa 2: imagen final
+FROM node:18-alpine
 
-# Copiamos el contenido generado por Next.js (estático)
-COPY --from=builder /app/out /usr/share/nginx/html
+WORKDIR /app
 
-# Exponemos el puerto 80
-EXPOSE 80
+COPY --from=builder /app ./
 
-# Comando de arranque de NGINX
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+
+CMD ["npm", "start"]
