@@ -1,6 +1,7 @@
 node_modules
 .next
 Dockerfile
-README.md
+.dockerignore
 .git
-.gitignore
+.github
+.vscode

@@ -5,14 +5,8 @@ on:
     branches:
       - main
 
-env:
-  AWS_REGION: us-east-2
-  ECR_REPOSITORY: atenea-frontend-repo
-  IMAGE_TAG: latest
-
 jobs:
   deploy:
-    name: Build and Deploy to Amazon ECS
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: us-east-2  # o la región que estés usando
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -33,12 +27,19 @@ jobs:
       - name: Build and push Docker image to ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: atenea-frontend-repo
+          IMAGE_TAG: latest
         run: |
-          docker build -t $ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} .
-          docker push $ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Register new task definition in ECS
-        run: echo 
+        run: |
+          echo "Implementar esto o usar uno estático desde consola si ya está registrado"
 
       - name: Deploy to Amazon ECS
-        run: echo 
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          cluster: atenea-cluster
+          service: atenea-frontend-service
+          task-definition: atenea-frontend-task-definition.json
