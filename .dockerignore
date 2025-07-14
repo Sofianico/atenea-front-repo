@@ -5,3 +5,5 @@ Dockerfile
 .git
 .github
 .vscode
+npm-debug.log
+.next/cache
