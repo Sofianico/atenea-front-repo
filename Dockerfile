@@ -6,7 +6,7 @@ WORKDIR /app
 # Copiamos dependencias y las instalamos
 COPY package*.json ./
 COPY next.config.js ./
-COPY tsconfig.json ./
+# COPY tsconfig.json ./
 COPY . .
 
 RUN npm install
