@@ -1,4 +1,4 @@
-name: Build and Deploy to ECS
+name: Deploy Frontend to AWS ECS
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-2  # o la región que estés usando
+          aws-region: us-east-2
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -34,12 +34,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Register new task definition in ECS
-        run: |
-          echo "Implementar esto o usar uno estático desde consola si ya está registrado"
+        run: echo "skip si ya tenés esto hecho en ECS"
 
       - name: Deploy to Amazon ECS
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
-          cluster: atenea-cluster
-          service: atenea-frontend-service
-          task-definition: atenea-frontend-task-definition.json
+        run: echo "skip si ya tenés esto armado con Fargate"
