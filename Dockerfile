@@ -1,23 +1,19 @@
-# Etapa 1: Construcción
+# Etapa 1: Build de la app
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copiamos dependencias y las instalamos
 COPY package*.json ./
-COPY next.config.js ./
-# COPY tsconfig.json ./
-COPY . .
-
 RUN npm install
+
+COPY . .
 RUN npm run build
 
-# Etapa 2: Imagen final
+# Etapa 2: Imagen final que ejecuta la app
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Copiamos solo lo necesario del build
 COPY --from=builder /app ./
 
 EXPOSE 3000
